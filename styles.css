@@ -1,0 +1,322 @@
+html {
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+#navbar {
+  width: 100%;
+  height: 4rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+#navbar #search-container {
+  width: 35rem;
+  height: 2.5rem;
+  position: relative;
+}
+#navbar #search-container form {
+  width: 100%;
+  height: 2.5rem;
+}
+#navbar #search-container form #input {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+}
+#navbar #search-container form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+#navbar #fav-link {
+  font-size: 1.4rem;
+}
+#search-container form button img {
+  width: 100%;
+}
+#search-container .search-list {
+  width: 100%;
+  height: 25rem;
+  background-color: black;
+  color: white;
+  overflow-y: scroll;
+  border: 1px solid white;
+}
+#search-container .search-list::-webkit-scrollbar {
+  width: 5px;
+}
+#search-container .search-list::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+.hide {
+  display: none;
+}
+#search-container .search-list .search-item {
+  width: 100%;
+  height: 10rem;
+  background-color: inherit;
+  padding: 0.5rem;
+  border-top: 1px solid white;
+}
+#search-container .search-list .search-item .poster {
+  width: 30%;
+  height: 100%;
+  background-color: brown;
+  float: left;
+}
+#search-container .search-list .search-item .search-item-info {
+  width: 70%;
+  height: 100%;
+  background-color: inherit;
+  float: right;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+  padding-right: 0;
+  font-size: 0.8rem;
+  position: relative;
+}
+.search-item-info h3 {
+  margin: 0.3rem auto 0.8rem 0.2rem;
+  font-weight: bold;
+}
+.search-item-info p {
+  padding-left: 0.2rem;
+}
+.search-item-info .year {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.search-item-info button {
+  width: auto;
+  height: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.2rem;
+  background-color: greenyellow;
+  padding: 0.5rem;
+  border: 1px solid white;
+  outline: none;
+}
+#navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+#logo {
+  width: 5rem;
+  background-color: goldenrod;
+  color: black;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+#main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.display-movie {
+  width: 15rem;
+  height: 25rem;
+  margin: 1rem;
+  position: relative;
+}
+.display-movie a {
+  text-decoration: none;
+  color: inherit;
+}
+.display-movie:hover {
+  border-bottom: 2px solid white;
+}
+.display-movie .display-movie-info {
+  width: 100%;
+  height: 40%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.display-movie-info h2 {
+  margin: 1rem 0;
+}
+.display-movie-info p {
+  margin: 1rem 0;
+}
+.display-movie-info button {
+  width: auto;
+  height: 2rem;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: greenyellow;
+  padding: 0.5rem;
+  border: 1px solid white;
+  outline: none;
+  cursor: pointer;
+}
+.display-movie img {
+  width: 100%;
+  height: 60%;
+}
+
+/* MOVIE DETAILS PAGE */
+#movie-details {
+  width: 100vw;
+  height: 100vh;
+}
+#movie-details .movie-info {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#movie-details .movie-info img {
+  width: 30%;
+  height: 40rem;
+  margin: 0 auto;
+}
+#movie-details .movie-info .info {
+  width: 30%;
+  height: 40rem;
+  margin: 0 auto;
+}
+#movie-details .movie-info .info h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+#movie-details .movie-info .info p {
+  margin: 1.5rem auto;
+}
+.unFav {
+  background-color: red;
+}
+.Fav {
+  background-color: greenyellow;
+}
+
+/* FAVOURITE MOVIES PAGE */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  bottom: 1.5rem;
+}
+#favourites {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  padding-bottom: 3rem;
+}
+#favourites .fav-item {
+  width: 15rem;
+  height: 22rem;
+  margin: 1rem;
+  position: relative;
+}
+#favourites .fav-item:hover {
+  border-bottom: 2px solid white;
+}
+#favourites .fav-item img {
+  width: 100%;
+  height: 70%;
+  cursor: pointer;
+}
+#favourites .fav-item a {
+  text-decoration: none;
+  color: inherit;
+}
+#favourites .fav-item .fav-item-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#favourites .fav-item .fav-item-info a h4 {
+  text-align: left;
+  margin: 1rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#favourites .fav-item .fav-item-info p {
+  margin: 1rem 0;
+}
+#favourites .fav-item .fav-item-info button {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+  #navbar #search-container {
+    width: 32rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html {
+    font-size: 13px;
+  }
+  #navbar #search-container {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+  #navbar #search-container {
+    width: 25rem;
+  }
+}
