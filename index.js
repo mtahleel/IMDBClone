@@ -27,7 +27,7 @@ searchInput.addEventListener("keyup", function (e) {
   // Function to fetch movies
   async function fetchMovies() {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${APIKey}&s=${searchQuery}`
+      `https://www.omdbapi.com/?apikey=${APIKey}&s=${searchQuery}`
     );
     const data = await response.json();
     const movies = data.Search;

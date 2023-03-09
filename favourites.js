@@ -23,7 +23,7 @@ async function fetchMovies() {
   favouritesContainer.innerHTML = "";
   for (let i = 0; i < favMovies.length; i++) {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${APIKey}&i=${favMovies[i]}`
+      `https://www.omdbapi.com/?apikey=${APIKey}&i=${favMovies[i]}`
     );
     const data = await response.json();
 

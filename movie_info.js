@@ -9,7 +9,7 @@ const id = urlArray.at(-1);
 // Function to fetch movies
 async function fetchMovieDetails(id) {
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=${APIKey}&i=${id}`
+    `https://www.omdbapi.com/?apikey=${APIKey}&i=${id}`
   );
   const data = await response.json();
 
